@@ -23,7 +23,7 @@ const InputPlace = props => {
                 props.setInputValue('');
               }}
             />
-      </View>
+        </View>
     );
 }
 
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
         {
             padding: 20,
             width: '100%',
-            marginTop: 50,
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center'

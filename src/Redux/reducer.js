@@ -1,7 +1,9 @@
 import * as actionTypes from './actionTypes'
 
 const initState = {
-    placeList: []
+    placeList: [],
+    isAuth: false,
+    token: null
 }
 export const rootReducer = (state=initState,action) => {
     switch(action.type) {
@@ -10,11 +12,17 @@ export const rootReducer = (state=initState,action) => {
                 ...state,
                 placeList: state.placeList.concat(action.payload)
             }
-            case actionTypes.DELETE_PLACE:
-                return {
-                    ...state,
-                    placeList: state.placeList.filter(place=>place.key!==action.payload)
-                }
+        case actionTypes.DELETE_PLACE:
+            return {
+                ...state,
+                placeList: state.placeList.filter(place=>place.key!==action.payload)
+            }
+        case actionTypes.AURHENTICATE_USER:
+            return {
+                ...state,
+                isAuth: true,
+                token: action.payload
+            }
         default:
             return state;
     }

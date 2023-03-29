@@ -1,4 +1,4 @@
-import {View,Modal,Image,Text,Button,TouchableOpacity} from 'react-native';
+import {View,Modal,Image,Text,TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const PlaceDetail = props => {

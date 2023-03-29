@@ -25,8 +25,7 @@ const NavigationTab = props => {
                         <Icons name='md-map' color={color} size={size}/>
                     )
                 }}
-            />
-            
+            /> 
         </tab.Navigator>
     );
 }
